@@ -1,0 +1,11 @@
+/*Напишите функцию camelize(str), которая преобразует строки вида «my-short-string» в «myShortString».
+
+То есть дефисы удаляются, а все слова после них получают заглавную букву.*/
+"use strict";
+
+function camelize(str) {
+  let ar = str.split('-')
+  let ar1 = ar.slice(1).map(item => item.slice(0,1).toUpperCase() + item.slice(1))
+  let ar2 = ar.slice(0,1).concat(ar1)
+  return ar2.join('')
+};
