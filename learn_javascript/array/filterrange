@@ -5,6 +5,6 @@
 "use strict";
 
 function filterRange(arr, start, end) {
-  let arr1 = arr.filter(item => (item >= start) & (item <= end))
+  let arr1 = arr.filter(item => (item >= start) && (item <= end))
   return arr1
 };
