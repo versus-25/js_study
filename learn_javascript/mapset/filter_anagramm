@@ -1,0 +1,18 @@
+//фильтрация анаграмм
+"use strict";
+  // ...Ваш код...
+function aclean(arr) {
+  let set1 = new Set(); 
+  let arr1 = []
+  for (let x of arr){
+    let str = x.toLowerCase()
+               .split('')
+               .sort()
+               .join('')
+    if (!set1.has(str)) {
+      set1.add(str);
+      arr1.push(x)
+    };
+  };
+  return arr1;
+};
